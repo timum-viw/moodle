@@ -89,7 +89,7 @@ $CFG->dboptions = array(
 //
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
-$CFG->wwwroot   = 'https://vivantes.herokuapp.com';
+$CFG->wwwroot   = 'http://vivantes.herokuapp.com';
 //=========================================================================
 // 3. DATA FILES LOCATION
 //=========================================================================
