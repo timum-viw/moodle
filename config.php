@@ -135,7 +135,7 @@ $CFG->admin = 'admin';
 // in PHP.ini, you can also specify it here if needed.
 // See details at: http://php.net/manual/en/function.date-default-timezone-set.php
 // List of time zones at: http://php.net/manual/en/timezones.php
-//     date_default_timezone_set('Australia/Perth');
+     date_default_timezone_set('Europe/Berlin');
 //
 // Change the key pair lifetime for Moodle Networking
 // The default is 28 days. You would only want to change this if the key
@@ -435,7 +435,7 @@ $CFG->admin = 'admin';
 // want to have initial error messages for eventual database connection problems
 // localized too, you have to set your language code here.
 //
-//     $CFG->lang = 'yourlangcode'; // for example 'cs'
+     $CFG->lang = 'de'; // for example 'cs'
 //
 // When Moodle is about to perform an intensive operation it raises PHP's memory
 // limit. The following setting should be used on large sites to set the raised
