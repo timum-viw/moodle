@@ -36,12 +36,13 @@ $CFG = new stdClass();
 // First, you need to configure the database where all Moodle data       //
 // will be stored.  This database must already have been created         //
 // and a username/password created to access it.                         //
+$parsed_db_url = parse_ulr(getenv("DATABASE_URL"));
 $CFG->dbtype    = 'pgsql';      // 'pgsql', 'mariadb', 'mysqli', 'sqlsrv' or 'oci'
 $CFG->dblibrary = 'native';     // 'native' only at the moment
-$CFG->dbhost    = 'localhost';  // eg 'localhost' or 'db.isp.com' or IP
-$CFG->dbname    = 'moodle';     // database name, eg moodle
-$CFG->dbuser    = 'username';   // your database username
-$CFG->dbpass    = 'password';   // your database password
+$CFG->dbhost    = $parsed_db_url['host'];  // eg 'localhost' or 'db.isp.com' or IP
+$CFG->dbname    = substr($parsed_db_url['path'], 1);     // database name, eg moodle
+$CFG->dbuser    = $parsed_db_url['user'];   // your database username
+$CFG->dbpass    = $parsed_db_url['pass'];   // your database password
 $CFG->prefix    = 'mdl_';       // prefix to use for all table names
 $CFG->dboptions = array(
     'dbpersist' => false,       // should persistent database connections be
@@ -88,7 +89,7 @@ $CFG->dboptions = array(
 //
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
-$CFG->wwwroot   = 'http://example.com/moodle';
+$CFG->wwwroot   = 'https://vivantes.herokuapp.com';
 //=========================================================================
 // 3. DATA FILES LOCATION
 //=========================================================================
@@ -101,7 +102,7 @@ $CFG->wwwroot   = 'http://example.com/moodle';
 //   no permissions at all, but that "others" have full permissions.
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
-$CFG->dataroot  = '/home/example/moodledata';
+$CFG->dataroot  = '/tmp';
 //=========================================================================
 // 4. DATA FILES PERMISSIONS
 //=========================================================================
