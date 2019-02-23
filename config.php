@@ -36,7 +36,7 @@ $CFG = new stdClass();
 // First, you need to configure the database where all Moodle data       //
 // will be stored.  This database must already have been created         //
 // and a username/password created to access it.                         //
-$parsed_db_url = parse_ulr(getenv("DATABASE_URL"));
+$parsed_db_url = parse_url(getenv("DATABASE_URL"));
 $CFG->dbtype    = 'pgsql';      // 'pgsql', 'mariadb', 'mysqli', 'sqlsrv' or 'oci'
 $CFG->dblibrary = 'native';     // 'native' only at the moment
 $CFG->dbhost    = $parsed_db_url['host'];  // eg 'localhost' or 'db.isp.com' or IP
