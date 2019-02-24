@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "post-install-cmd": [
+        "mv lang/de/* ../tmp/lang/"
+    ]
+  },
   "require": {
     "ext-gd": "*",
     "ext-intl": "*"
