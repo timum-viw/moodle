@@ -102,7 +102,7 @@ $CFG->wwwroot   = 'http://vivantes.herokuapp.com';
 //   no permissions at all, but that "others" have full permissions.
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
-$CFG->dataroot  = '/tmp';
+$CFG->dataroot  = '/app/tmp';
 //=========================================================================
 // 4. DATA FILES PERMISSIONS
 //=========================================================================
