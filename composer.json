@@ -1,11 +1,4 @@
 {
-  "scripts": {
-    "post-install-cmd": [
-        "mkdir ../tmp",
-        "mkdir ../tmp/lang",
-        "mv lang/de/* ../tmp/lang/"
-    ]
-  },
   "require": {
 		"ext-gd": "*",
 		"ext-intl": "*",
