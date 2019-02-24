@@ -6,7 +6,10 @@
     ]
   },
   "require": {
-    "ext-gd": "*",
-    "ext-intl": "*"
-  }
+		"ext-gd": "*",
+		"ext-intl": "*",
+		"ext-mbstring": "*",
+		"ext-xmlrpc": "*",
+		"ext-soap": "*"
+	}
 }
